@@ -1,8 +1,8 @@
-@use "variables";
+@use "variables" as v;
 
 /* First mixin brackground */
 @mixin modal-background{
-    background-color: variables.$Black-modal;
+    background-color: v.$Black-modal;
     position: absolute;
     top: 0;
     left: 0;
@@ -15,7 +15,7 @@
 /* Second mixing image-btn*/
 
 @mixin image-btn($top, $left){
-    background-color: variables.$White;
+        background-color: v.$White;
         width: 40px;
         height: 40px;
         padding: 12px;
@@ -26,4 +26,35 @@
         &:hover{
             cursor: pointer;
         }
+}
+
+/* Third mixin input __Plus and __minus */
+
+@mixin changeNumber($pv, $ph){
+        width: 25px;
+        height: 100%;
+        padding: $pv $ph;
+        &:hover{
+            cursor: pointer;
+        }
+}
+
+/* Four mixin to buttons */
+@mixin button(){
+    background-color: v.$Orange;
+    width: 100%;
+    height: 57px;
+    border-radius: 8px;
+    border: none;
+    color: v.$White;
+    font-size: 0.9em;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    &:hover{
+        cursor: pointer;
+        opacity: 0.5;
+    }
 }

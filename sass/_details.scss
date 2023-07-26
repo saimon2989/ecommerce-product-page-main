@@ -2,7 +2,7 @@
 @use "mixins";
 
 .details{
-    border: 1px solid red;
+    //border: 1px solid red;
     padding: 24px;
     &__company{
         color: v.$Orange;
@@ -47,6 +47,9 @@
         font-weight: 700;
         color: v.$Dark-grayish-blue;
         text-decoration: line-through;
+    }
+    &__button{
+        @include mixins.button;
     }
     
 }
