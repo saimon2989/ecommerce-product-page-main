@@ -119,6 +119,7 @@ body {
   width: 250px;
   height: 100%;
   padding: 28px 24px;
+  display: none;
 }
 .modal-navbar__background {
   background-color: hsla(0, 0%, 0%, 0.5);
@@ -127,6 +128,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1;
   display: none;
 }
 .modal-navbar__items {
@@ -188,6 +190,53 @@ body {
   .gallery__thumbnail {
     display: block;
   }
+}
+
+.details {
+  border: 1px solid red;
+  padding: 24px;
+}
+.details__company {
+  color: hsl(26, 100%, 55%);
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+.details__title {
+  font-size: 1.7em;
+  margin-bottom: 16px;
+}
+.details__description {
+  font-size: 0.94em;
+  color: hsl(219, 9%, 45%);
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+.details__prices {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.details__now {
+  font-size: 1.8em;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.details__discount {
+  font-size: 0.5em;
+  background-color: hsl(25, 100%, 94%);
+  color: hsl(26, 100%, 55%);
+  padding: 4px;
+  border-radius: 4px;
+}
+.details__before {
+  font-weight: 700;
+  color: hsl(219, 9%, 45%);
+  text-decoration: line-through;
 }
 
 /* Estilos generales */
