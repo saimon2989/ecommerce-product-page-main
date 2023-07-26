@@ -26,6 +26,9 @@
         &:hover{
             cursor: pointer;
         }
+        @media (min-width: 1115px){
+            display: none;
+        }
 }
 
 /* Third mixin input __Plus and __minus */

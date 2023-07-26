@@ -157,7 +157,6 @@ body {
   background-image: url("/ecommerce-product-page-main/images/image-product-1.jpg");
   background-position-y: -35px;
   background-size: cover;
-  border: 1px solid red;
 }
 .gallery__previous {
   background-color: hsl(0, 0%, 100%);
@@ -172,6 +171,11 @@ body {
 .gallery__previous:hover {
   cursor: pointer;
 }
+@media (min-width: 1115px) {
+  .gallery__previous {
+    display: none;
+  }
+}
 .gallery__next {
   background-color: hsl(0, 0%, 100%);
   width: 40px;
@@ -185,12 +189,37 @@ body {
 .gallery__next:hover {
   cursor: pointer;
 }
+@media (min-width: 1115px) {
+  .gallery__next {
+    display: none;
+  }
+}
 .gallery__thumbnail {
+  width: 90px;
+  border-radius: 16px;
+}
+.gallery__thumbnail:hover {
+  cursor: pointer;
+  border: 1px solid hsl(26, 100%, 55%);
+}
+.gallery__thumbnails {
   display: none;
 }
 @media (min-width: 1115px) {
-  .gallery__thumbnail {
-    display: block;
+  .gallery__thumbnails {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@media (min-width: 1115px) {
+  .gallery {
+    width: 446px;
+  }
+  .gallery__image-container {
+    background-position-y: 0;
+    border-radius: 16px;
+    height: 446px;
+    margin-bottom: 32px;
   }
 }
 
@@ -256,6 +285,28 @@ body {
 .details__button:hover {
   cursor: pointer;
   opacity: 0.5;
+}
+@media (min-width: 1115px) {
+  .details {
+    width: 446px;
+    padding-top: 60px;
+  }
+  .details__title {
+    font-size: 2.7em;
+    margin-bottom: 48px;
+  }
+  .details__description {
+    font-size: 0.9em;
+    margin-bottom: 37px;
+  }
+  .details__prices {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .details__product-quantity {
+    display: flex;
+    gap: 32px;
+  }
 }
 
 .input {
@@ -359,6 +410,15 @@ body {
 @media (min-width: 1115px) {
   .main-container {
     width: 1115px;
+  }
+}
+
+/* Estilos del content */
+@media (min-width: 1115px) {
+  .content {
+    display: flex;
+    padding: 90px 50px;
+    gap: 124px;
   }
 }
 
