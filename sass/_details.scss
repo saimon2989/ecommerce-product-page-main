@@ -51,9 +51,6 @@
     &__button{
         @include mixins.button;
     }
-    &__product-quantity{
-
-    }
     @media(min-width: 1115px){
         width: 446px;
         padding-top: 60px;

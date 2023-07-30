@@ -14,7 +14,7 @@
 
 /* Second mixing image-btn*/
 
-@mixin image-btn($top, $left){
+@mixin image-btn($top, $left, $showDesktop){
         background-color: v.$White;
         width: 40px;
         height: 40px;
@@ -27,7 +27,11 @@
             cursor: pointer;
         }
         @media (min-width: 1115px){
-            display: none;
+            @if $showDesktop == true{
+                display: block;
+            }@else{
+                display: none;
+            }
         }
 }
 
