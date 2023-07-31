@@ -121,7 +121,6 @@ body {
   width: 250px;
   height: 100%;
   padding: 28px 24px;
-  display: none;
 }
 .modal-navbar__background {
   background-color: hsla(0, 0%, 0%, 0.5);
@@ -503,6 +502,17 @@ body {
     padding: 90px 50px;
     gap: 124px;
   }
+}
+
+.show {
+  display: block;
+}
+
+.cart-empty {
+  font-weight: 700;
+  color: hsla(0, 0%, 0%, 0.5);
+  text-align: center;
+  margin-top: 30px;
 }
 
 /*# sourceMappingURL=main.css.map */

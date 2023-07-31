@@ -1,5 +1,5 @@
 @use 'initial';
-@use 'variables';
+@use 'variables' as v;
 @use 'header';
 @use 'navbar';
 @use 'modal-navbar';
@@ -29,6 +29,17 @@
         padding: 90px 50px;
         gap: 124px;
     }
+}
+
+.show{
+    display: block;
+}
+.cart-empty{
+    //border: 1px solid red;
+    font-weight: 700;
+    color: v.$Black-modal;
+    text-align: center;
+    margin-top: 30px;
 }
 
 
