@@ -100,7 +100,7 @@ let galleryThumbnails = document.querySelectorAll('.gallery__thumbnail');
 galleryThumbnails = [...galleryThumbnails];
 galleryThumbnails.forEach(thumbnail =>{
     thumbnail.addEventListener('click', event =>{
-        imageContainer.style.backgroundImage = `url('/ecommerce-product-page-main/images/image-product-${event.target.id}.jpg')`
+        imageContainer.style.backgroundImage = `url('/images/image-product-${event.target.id}.jpg')`
     })
 })
 
@@ -111,7 +111,7 @@ modalThumbnails = [...modalThumbnails];
 modalThumbnails.forEach(modalThumbnail =>{
     modalThumbnail.addEventListener('click', event =>{
         console.log(event.target.id.slice(-1));
-        modalImageContainer.style.backgroundImage = `url('/ecommerce-product-page-main/images/image-product-${event.target.id.slice(-1)}.jpg')`
+        modalImageContainer.style.backgroundImage = `url('/images/image-product-${event.target.id.slice(-1)}.jpg')`
     })
 });
 
@@ -154,7 +154,7 @@ modalCloseIcon.addEventListener('click', ()=>{
 /*  function to render productos in the modal cart*/
 function renderProductInModalCart(){
     productContainer.innerHTML = `<div class="cart-modal__details-container">
-        <img class="cart-modal__image" src="./images/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail">
+        <img class="cart-modal__image" src="/images/image-product-1-thumbnail.jpg" alt="image-product-1-thumbnail">
             <div>
                     <p class="cart-modal__product">
                     Automn Limited Edition...
@@ -163,7 +163,7 @@ function renderProductInModalCart(){
                     $125 x3 <span>$375.00</span>
                     </p>
             </div>
-            <img class="cart-modal__delete" src="./images/icon-delete.svg" alt="delete-icon">
+            <img class="cart-modal__delete" src="/images/icon-delete.svg" alt="delete-icon">
             </div>
         <button class="cart-modal__checkout">Checkout</button>`;
         deleteProduct();
@@ -184,7 +184,7 @@ function changeNextImage(imgContainer){
     }else{
         imgIndex++;
     }
-    imgContainer.style.backgroundImage = `url('/ecommerce-product-page-main/images/image-product-${imgIndex}.jpg')`
+    imgContainer.style.backgroundImage = `url('/images/image-product-${imgIndex}.jpg')`
 
 };
 /* Function to slide precious image */
@@ -195,7 +195,7 @@ function changePreviousImage(imgContainer){
     }else{
         imgIndex--;
     }
-    imgContainer.style.backgroundImage = `url('/ecommerce-product-page-main/images/image-product-${imgIndex}.jpg')`
+    imgContainer.style.backgroundImage = `url('/images/image-product-${imgIndex}.jpg')`
 
 };
 
