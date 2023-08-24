@@ -72,14 +72,20 @@ const previousGalleryBtn = document.querySelector('.gallery__previous');
 const nextGalleryBtn = document.querySelector('.gallery__next'); 
 let imgIndex = 1;
 
-nextGalleryBtn.addEventListener('click', ()=>{
+
+nextGalleryBtn.addEventListener('click', (event)=>{
     changeNextImage(imageContainer);
+    event.stopPropagation();
+    console.log(event)
 })
-previousGalleryBtn.addEventListener('click', ()=>{
+previousGalleryBtn.addEventListener('click', (event)=>{
     changePreviousImage(imageContainer);
+    event.stopPropagation();
+    console.log(event)
 })
 
-
+// Verificar si la ventana es más pequeña que cierto tamaño (por ejemplo, 768px) para dispositivos móviles
+const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
 
 //Show modal images when user click in the principal image
@@ -88,7 +94,9 @@ const imageModal = document.querySelector('.modal-gallery__background');
 const closeModalBtn = document.querySelector('.modal-gallery__close');
 
 imageContainer.addEventListener('click', ()=>{
-    imageModal.style.display = 'grid';
+    if(!isMobile){
+        imageModal.style.display = 'grid';
+    }    
 })
 closeModalBtn.addEventListener('click', ()=>{
     imageModal.style.display = 'none';
